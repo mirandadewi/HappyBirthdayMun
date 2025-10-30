@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sayangggggggg 🎂</title>
+    <link rel="icon" href="1.jpg" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-image: url('bg1.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 107, 157, 0.2);
+            z-index: -1;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            max-width: 600px;
+            animation: fadeIn 1s ease-in;
+            backdrop-filter: blur(10px);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        h1 {
+            font-size: 2em;
+            color: #ff6b9d;
+            margin-bottom: 10px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .cake {
+            font-size: 100px;
+            margin: 20px 0;
+            animation: rotate 3s ease-in-out infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes rotate {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
+        }
+        
+        .message {
+            font-size: 1.3em;
+            color: #333;
+            line-height: 1.8;
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff3f8;
+            border-radius: 15px;
+            border-left: 5px solid #ff6b9d;
+        }
+        
+        .button-container {
+            margin-top: 30px;
+        }
+        
+        .start-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            backdrop-filter: blur(5px);
+        }
+        
+        .start-container {
+            background: linear-gradient(135deg, #ff6b9d, #c06c84);
+            padding: 50px 60px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(255, 107, 157, 0.6);
+            animation: fadeIn 1s ease-in;
+            margin-left: 50px;
+        }
+        
+        .start-container h2 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .start-container p {
+            color: white;
+            font-size: 1.3em;
+            margin-bottom: 30px;
+        }
+        
+        .start-button {
+            background: white !important;
+            color: #ff6b9d !important;
+            font-weight: bold;
+            padding: 18px 45px;
+            font-size: 1.3em;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+            transition: all 0.3s;
+        }
+        
+        .start-button:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Gallery Styles */
+        .gallery-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.95), rgba(192, 108, 132, 0.95));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3000;
+            backdrop-filter: blur(15px);
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        .gallery-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><text x="10" y="50" font-size="40" opacity="0.1">💕</text><text x="60" y="30" font-size="30" opacity="0.1">✨</text><text x="20" y="90" font-size="35" opacity="0.1">💖</text></svg>');
+            animation: float 20s infinite linear;
+        }
+        
+        @keyframes float {
+            from { background-position: 0 0; }
+            to { background-position: 100px 100px; }
+        }
+        
+        .gallery-container {
+            max-width: 900px;
+            width: 90%;
+            text-align: center;
+            animation: slideUp 0.8s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .gallery-title {
+            color: white;
+            font-size: 2.8em;
+            margin-bottom: 35px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            animation: bounce 2s infinite;
+            font-weight: bold;
+        }
+        
+        .slideshow-container {
+            position: relative;
+            background: white;
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+            margin-bottom: 25px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .slide {
+            display: none;
+        }
+        
+        .slide.active {
+            display: block;
+            animation: slideIn 0.6s ease-in-out;
+        }
+        
+        @keyframes slideIn {
+            from { 
+                opacity: 0; 
+                transform: scale(0.8) rotateY(20deg); 
+            }
+            to { 
+                opacity: 1; 
+                transform: scale(1) rotateY(0deg); 
+            }
+        }
+        
+        .slide img {
+            width: 100%;
+            max-width: 380px;
+            max-height: 280px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 3px solid #fff3f8;
+            transition: transform 0.3s;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .slide img:hover {
+            transform: scale(1.02);
+        }
+        
+        .slide-caption {
+            color: #ff6b9d;
+            font-size: 1.4em;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #fff3f8, #ffe4ec);
+            border-radius: 15px;
+            margin-top: 20px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.2);
+            border: 2px solid rgba(255, 107, 157, 0.3);
+        }
+        
+        .gallery-nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .gallery-btn {
+            background: linear-gradient(135deg, #ff6b9d, #c06c84);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .gallery-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #ff1744, #ff6b9d);
+        }
+        
+        .gallery-btn:active {
+            transform: scale(0.95);
+        }
+        
+        .slide-counter {
+            color: white;
+            font-size: 1.5em;
+            margin: 20px 0;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .close-gallery {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: white;
+            color: #ff6b9d;
+            border: none;
+            font-size: 2.5em;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s;
+            font-weight: bold;
+            z-index: 10;
+            border: 3px solid rgba(255, 107, 157, 0.3);
+        }
+        
+        .close-gallery:hover {
+            transform: rotate(90deg) scale(1.15);
+            background: #ff6b9d;
+            color: white;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+        }
+        
+        .close-gallery:active {
+            transform: rotate(90deg) scale(0.95);
+        }
+        
+        /* Hearts decoration */
+        .gallery-overlay::after {
+            content: '💕';
+            position: absolute;
+            font-size: 80px;
+            opacity: 0.1;
+            animation: heartFloat 15s infinite ease-in-out;
+        }
+        
+        @keyframes heartFloat {
+            0%, 100% { 
+                top: -50px; 
+                left: 10%; 
+                transform: rotate(0deg);
+            }
+            50% { 
+                top: 110%; 
+                left: 80%; 
+                transform: rotate(360deg);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .gallery-title {
+                font-size: 1.8em;
+                margin-bottom: 20px;
+            }
+            
+            .slideshow-container {
+                padding: 12px;
+                max-width: 100%;
+            }
+            
+            .slide img {
+                max-height: 250px;
+                max-width: 100%;
+            }
+            
+            .slide-caption {
+                font-size: 1.1em;
+                padding: 10px 15px;
+            }
+            
+            .gallery-btn {
+                padding: 10px 20px;
+                font-size: 0.95em;
+            }
+            
+            .close-gallery {
+                top: 15px;
+                right: 15px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.8em;
+            }
+            
+            .slide-counter {
+                font-size: 1.2em;
+                padding: 8px 20px;
+            }
+        }
+            
+        .music-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #ff6b9d, #c06c84);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1.5em;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+            transition: all 0.3s;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+        
+        .music-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4); }
+            50% { box-shadow: 0 5px 25px rgba(255, 107, 157, 0.8); }
+        }
+        
+        button {
+            background: linear-gradient(45deg, #ff6b9d, #c06c84);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+        }
+        
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.6);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: #ff6b9d;
+            animation: fall 3s linear infinite;
+        }
+        
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+        
+        .love-counter {
+            font-size: 2em;
+            color: #ff1744;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉HAPPY BIRTHDAY SAYANG🎉</h1>
+        
+        <div class="cake" id="cake" onclick="blowCandles()">🎂</div>
+        
+        <div class="message" id="message1">
+            <p><strong>Cieee mun ultah🥳</strong></p>
+            <p>Selamat ulang tahun ya sayangku Cintakuu!</p>
+            <p>Semoga makin ganteng aja😎</p>
+            <p>Semoga panjang umur, sehat selalu, Murah Rezeki, segera mendapatkan Pekerjaan</p>
+            <p><em>Semoga makin sayangggg sama Mimi😘</em></p>
+        </div>
+        
+        <div class="message hidden" id="message2">
+            <p><strong>🎈 Fun Facts Tentang Sayangggku</strong></p>
+            <p>Ayangggg itu baik bangett❤️❤️</p>
+            <p>Walaupun suka marah trus kalau mimi marah malah marah balik</p>
+            <p>kalau bisa jangan gtu lgi ya mun hahha pelajari lagi kalau cewe ngambek gimana🤪</p>
+            <p>Tetap jadi cowo yang sabar ya muntheeeee🤪</p>
+        </div>
+        
+        <div class="message hidden" id="message3">
+            <p><strong>💝 Harapan Ultah Tahun Ini 💝</strong></p>
+            <p>Mimi doain semoga:</p>
+            <p>✨ Semua impian ayanggg tercapai</p>
+            <p>✨ Rezekinya lancar</p>
+            <p>✨ Dapat Pekerjaan yang Baik </p>
+            <p>✨ Dan yang paling penting...</p>
+            <p><strong>SEMOGA TRAKTIR MIMI MAKAN MARUGAME🍜</strong></p>
+            <p>(Becanda kok... atau enggak? 😏)</p>
+        </div>
+        
+        <div class="love-counter hidden" id="loveCounter">
+            ❤️ Love Meter: <span id="counter">0</span>% ❤️
+        </div>
+        
+        <div class="button-container">
+            <button onclick="nextMessage()" id="nextBtn">Lanjut Baca Dong Mun! 💌</button>
+            <button onclick="showLove()" id="loveBtn" class="hidden">Sayangggg mimi Nggak? 💕</button>
+        </div>
+    </div>
+    
+    <button class="music-btn" onclick="toggleMusic()" id="musicBtn" title="Putar Musik">🎵</button>
+
+    <audio id="bgMusic" loop playbackRate="1.0">
+        <source src="Happy Birthday.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="start-overlay" id="startOverlay">
+        <div class="start-container">
+            <h2>🎂 Selamat Datang Mumun❤️❤️❤️ 🎂</h2>
+            <p>Klik tombol di bawah ini mun eheeee!</p>
+            <button class="start-button" onclick="startExperience()">🎉 Mulai! 🎉</button>
+        </div>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="gallery-overlay hidden" id="galleryOverlay">
+        <button class="close-gallery" onclick="closeGallery()">×</button>
+        <div class="gallery-container">
+            <h2 class="gallery-title">📸Kenangan Selama 3 Tahun 6 Bulan💕</h2>
+            
+            <div class="slideshow-container">
+                <div class="slide active" id="slide1">
+                    <img src="7.jpg" alt="Foto 1" onerror="this.src='https://via.placeholder.com/600x400/ff6b9d/ffffff?text=Foto+Kita+1'">
+                    <div class="slide-caption">Nonton Bioskop</div>
+                </div>
+                
+                <div class="slide" id="slide2">
+                    <img src="3.jpg" alt="Foto 2" onerror="this.src='https://via.placeholder.com/600x400/c06c84/ffffff?text=Foto+Kita+2'">
+                    <div class="slide-caption">Fotobooth di Cafe Tengah</div>
+                </div>
+                
+                <div class="slide" id="slide3">
+                    <img src="4.jpg" alt="Foto 3" onerror="this.src='https://via.placeholder.com/600x400/f67280/ffffff?text=Foto+Kita+3'">
+                    <div class="slide-caption">Cemplooo Barenggg 🌟</div>
+                </div>
+                
+                <div class="slide" id="slide4">
+                    <img src="6.jpg" alt="Foto 4" onerror="this.src='https://via.placeholder.com/600x400/355c7d/ffffff?text=Foto+Kita+4'">
+                    <div class="slide-caption">Yeayyyy Sidang Barenggg💑</div>
+                </div>
+                
+                <div class="slide" id="slide5">
+                    <img src="8.jpg" alt="Foto 5" onerror="this.src='https://via.placeholder.com/600x400/feca57/333333?text=Foto+Kita+5'">
+                    <div class="slide-caption">Soon Wisudaaa💕</div>
+                </div>
+            </div>
+            
+            <div class="slide-counter">
+                <span id="currentSlide">1</span> / <span id="totalSlides">5</span>
+            </div>
+            
+            <div class="gallery-nav">
+                <button class="gallery-btn" onclick="changeSlide(-1)"> < </button>
+                <button class="gallery-btn" onclick="changeSlide(1)">  > </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let step = 1;
+        let lovePercentage = 0;
+        let musicPlaying = false;
+        let currentSlideIndex = 0;
+        const totalSlides = 5;
+        
+        function startExperience() {
+            document.getElementById('startOverlay').classList.add('hidden');
+            
+            const music = document.getElementById('bgMusic');
+            const musicBtn = document.getElementById('musicBtn');
+            
+            music.play().catch(e => console.log('Audio play failed:', e));
+            musicBtn.textContent = '🔊';
+            musicPlaying = true;
+            
+            createConfetti();
+        }
+        
+        function toggleMusic() {
+            const music = document.getElementById('bgMusic');
+            const musicBtn = document.getElementById('musicBtn');
+            
+            if (!musicPlaying) {
+                music.play().catch(e => console.log('Audio play failed:', e));
+                musicBtn.textContent = '🔊';
+                musicPlaying = true;
+            } else {
+                music.pause();
+                musicBtn.textContent = '🎵';
+                musicPlaying = false;
+            }
+        }
+        
+        function blowCandles() {
+            const cake = document.getElementById('cake');
+            cake.textContent = '🍰';
+            createConfetti();
+            setTimeout(() => {
+                cake.textContent = '🎂';
+            }, 2000);
+        }
+        
+        function nextMessage() {
+            step++;
+            if (step === 2) {
+                document.getElementById('message1').classList.add('hidden');
+                document.getElementById('message2').classList.remove('hidden');
+            } else if (step === 3) {
+                document.getElementById('message2').classList.add('hidden');
+                document.getElementById('message3').classList.remove('hidden');
+                document.getElementById('nextBtn').classList.add('hidden');
+                document.getElementById('loveBtn').classList.remove('hidden');
+            }
+        }
+        
+        function showLove() {
+            document.getElementById('loveCounter').classList.remove('hidden');
+            const interval = setInterval(() => {
+                lovePercentage += 5;
+                document.getElementById('counter').textContent = lovePercentage;
+                if (lovePercentage >= 100) {
+                    clearInterval(interval);
+                    createMassiveConfetti();
+                    setTimeout(() => {
+                        alert('YEAY! Mimi Sayanggg Ayanggg😍💕\n\nSelamat ulang tahun sekali lagi ya sayanggggggg 🎂🎉');
+                        openGallery();
+                    }, 500);
+                }
+            }, 100);
+        }
+        
+        function openGallery() {
+            document.getElementById('galleryOverlay').classList.remove('hidden');
+            currentSlideIndex = 0;
+            showSlide(currentSlideIndex);
+        }
+        
+        function closeGallery() {
+            document.getElementById('galleryOverlay').classList.add('hidden');
+        }
+        
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            
+            if (index >= slides.length) {
+                currentSlideIndex = 0;
+            } else if (index < 0) {
+                currentSlideIndex = slides.length - 1;
+            } else {
+                currentSlideIndex = index;
+            }
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlideIndex].classList.add('active');
+            
+            document.getElementById('currentSlide').textContent = currentSlideIndex + 1;
+        }
+        
+        function changeSlide(direction) {
+            showSlide(currentSlideIndex + direction);
+        }
+        
+        function createConfetti() {
+            const colors = ['#ff6b9d', '#c06c84', '#f67280', '#355c7d', '#feca57'];
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDelay = Math.random() * 2 + 's';
+                    document.body.appendChild(confetti);
+                    setTimeout(() => confetti.remove(), 3000);
+                }, i * 30);
+            }
+        }
+        
+        function createMassiveConfetti() {
+            for (let i = 0; i < 150; i++) {
+                setTimeout(() => {
+                    const colors = ['#ff6b9d', '#c06c84', '#f67280', '#355c7d', '#feca57', '#ff1744'];
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDelay = Math.random() * 1 + 's';
+                    document.body.appendChild(confetti);
+                    setTimeout(() => confetti.remove(), 3000);
+                }, i * 20);
+            }
+        }
+    </script>
+</body>
+</html>
